@@ -1,6 +1,7 @@
 
 import React from 'react';
 import ServiceTemplate from '../ServiceTemplate';
+import Portfolio from '@/components/Portfolio';
 
 const Nettoyage = () => {
   const benefits = [
@@ -10,6 +11,27 @@ const Nettoyage = () => {
     'Techniques adaptées à chaque support',
     'Produits respectueux de l\'environnement',
     'Devis gratuit et sans engagement'
+  ];
+  
+  const portfolioItems = [
+    {
+      id: '1',
+      imagePath: '/lovable-uploads/23234811-8015-4322-bbdd-d290f05de919.png',
+      title: 'Nettoyage de terrasse',
+      description: 'Nettoyage haute pression d\'une terrasse en pavés'
+    },
+    {
+      id: '2',
+      imagePath: '/lovable-uploads/3727f79a-7cf3-4c30-b3d1-df1eeec82d23.png',
+      title: 'Nettoyage de façade',
+      description: 'Traitement d\'une façade par pulvérisation à basse pression'
+    },
+    {
+      id: '3',
+      imagePath: '/lovable-uploads/060686dd-961a-408a-98e6-e7dd76d9abe4.png',
+      title: 'Nettoyage d\'allée',
+      description: 'Décapage et nettoyage d\'une allée en pierre naturelle'
+    }
   ];
   
   const content = (
@@ -82,6 +104,13 @@ const Nettoyage = () => {
           <strong>Contrôle qualité :</strong> Vérification du résultat final
         </li>
       </ol>
+      
+      <h3>Nos réalisations</h3>
+      <Portfolio 
+        title="Nos travaux de nettoyage" 
+        description="Découvrez quelques exemples de nos prestations de nettoyage professionnel"
+        items={portfolioItems}
+      />
     </>
   );
   
