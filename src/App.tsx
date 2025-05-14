@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
 import ZoneIntervention from "./pages/ZoneIntervention";
+import CityPage from "./pages/CityPage";
 import ReparationToiture from "./pages/services/ReparationToiture";
 import Demoussage from "./pages/services/Demoussage";
 import Gouttieres from "./pages/services/Gouttieres";
@@ -35,6 +36,7 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/zone-intervention" element={<ZoneIntervention />} />
+              <Route path="/zone-intervention/:citySlug" element={<CityPage />} />
               <Route path="/services/reparation-toiture" element={<ReparationToiture />} />
               <Route path="/services/demoussage" element={<Demoussage />} />
               <Route path="/services/gouttieres" element={<Gouttieres />} />

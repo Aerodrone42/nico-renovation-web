@@ -1,18 +1,11 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { MapPin } from 'lucide-react';
 import CTABanner from '@/components/CTABanner';
+import { cities } from '@/data/citiesData';
 
 const ZoneIntervention = () => {
-  const communes = [
-    'Châteaubriant', 'Erbray', 'Soudan', 'Saint-Aubin-des-Châteaux', 'Rougé',
-    'Sion-les-Mines', 'Lusanger', 'Derval', 'Issé', 'Moisdon-la-Rivière',
-    'Grand-Auverné', 'Petit-Auverné', 'Saint-Julien-de-Vouvantes', 'Juigné-des-Moutiers',
-    'La Meilleraye-de-Bretagne', 'Louisfert', 'Noyal-sur-Brutz', 'Fercé',
-    'Ruffigné', 'Saint-Vincent-des-Landes', 'Marsac-sur-Don', 'Treffieux',
-    'Jans', 'Nozay', 'Vay', 'Puceul', 'Abbaretz', 'La Chapelle-Glain'
-  ];
-  
   return (
     <div>
       {/* Hero Section */}
@@ -48,10 +41,15 @@ const ZoneIntervention = () => {
                 </h3>
                 
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                  {communes.map((commune, index) => (
-                    <div key={index} className="px-3 py-1.5 bg-white rounded border border-gray-200 text-sm">
-                      {commune}
-                    </div>
+                  {cities.map((city, index) => (
+                    <Link 
+                      key={index} 
+                      to={`/zone-intervention/${city.slug}`}
+                      className="px-3 py-1.5 bg-white rounded border border-gray-200 text-sm hover:border-nico-blue hover:bg-blue-50 transition-colors flex items-center"
+                    >
+                      <MapPin className="mr-2 text-nico-red" size={14} />
+                      {city.name}
+                    </Link>
                   ))}
                 </div>
               </div>
