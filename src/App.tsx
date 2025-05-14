@@ -10,6 +10,13 @@ import Contact from "./pages/Contact";
 import ZoneIntervention from "./pages/ZoneIntervention";
 import ReparationToiture from "./pages/services/ReparationToiture";
 import Demoussage from "./pages/services/Demoussage";
+import Gouttieres from "./pages/services/Gouttieres";
+import Ramonage from "./pages/services/Ramonage";
+import Isolation from "./pages/services/Isolation";
+import Nettoyage from "./pages/services/Nettoyage";
+import EspacesVerts from "./pages/services/EspacesVerts";
+import TravauxInterieur from "./pages/services/TravauxInterieur";
+import Peinture from "./pages/services/Peinture";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -30,7 +37,13 @@ const App = () => (
               <Route path="/zone-intervention" element={<ZoneIntervention />} />
               <Route path="/services/reparation-toiture" element={<ReparationToiture />} />
               <Route path="/services/demoussage" element={<Demoussage />} />
-              {/* Vous pourrez ajouter les autres pages de services ici */}
+              <Route path="/services/gouttieres" element={<Gouttieres />} />
+              <Route path="/services/ramonage" element={<Ramonage />} />
+              <Route path="/services/isolation" element={<Isolation />} />
+              <Route path="/services/nettoyage" element={<Nettoyage />} />
+              <Route path="/services/espaces-verts" element={<EspacesVerts />} />
+              <Route path="/services/travaux-interieur" element={<TravauxInterieur />} />
+              <Route path="/services/peinture" element={<Peinture />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
