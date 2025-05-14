@@ -1,8 +1,17 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Phone, Mail, ChevronDown } from 'lucide-react';
+import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -70,30 +79,32 @@ const Header = () => {
               Accueil
             </Link>
             
-            {/* Services Dropdown */}
-            <div className="relative group">
-              <button 
-                className="flex items-center font-medium hover:text-nico-blue transition-colors"
-                onClick={() => setServicesMenuOpen(!servicesMenuOpen)}
-              >
-                Nos services
-                <ChevronDown size={16} className="ml-1" />
-              </button>
-              
-              <div className="absolute z-10 left-0 mt-2 w-64 bg-white shadow-lg rounded-md overflow-hidden transform opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 ease-in-out origin-top-left">
-                <div className="py-2">
-                  {services.map((service) => (
-                    <Link 
-                      key={service.path}
-                      to={service.path}
-                      className="block px-4 py-2 text-sm hover:bg-gray-100 hover:text-nico-blue"
-                    >
-                      {service.title}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
+            {/* Services Navigation Menu */}
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="font-medium hover:text-nico-blue transition-colors">
+                    Nos services
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[400px] gap-1 p-4 md:w-[500px] md:grid-cols-2">
+                      {services.map((service) => (
+                        <li key={service.path}>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              to={service.path}
+                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            >
+                              <div className="text-sm font-medium leading-none">{service.title}</div>
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
             
             <Link to="/zone-intervention" className="font-medium hover:text-nico-blue transition-colors">
               Zone d'intervention
@@ -140,7 +151,11 @@ const Header = () => {
                 onClick={() => setServicesMenuOpen(!servicesMenuOpen)}
               >
                 Nos services
-                <ChevronDown size={16} className={`transition-transform ${servicesMenuOpen ? 'rotate-180' : ''}`} />
+                {servicesMenuOpen ? (
+                  <X size={16} />
+                ) : (
+                  <Menu size={16} />
+                )}
               </button>
               
               {servicesMenuOpen && (
