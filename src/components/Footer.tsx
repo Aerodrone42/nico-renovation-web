@@ -62,13 +62,31 @@ const Footer = () => {
                 <Link to="/services/reparation-toiture" className="hover:text-nico-green">Réparation toiture</Link>
               </li>
               <li>
-                <Link to="/services/demoussage" className="hover:text-nico-green">Démoussage</Link>
+                <Link to="/services/gouttieres" className="hover:text-nico-green">Gouttières</Link>
               </li>
               <li>
                 <Link to="/services/ramonage" className="hover:text-nico-green">Ramonage</Link>
               </li>
               <li>
                 <Link to="/services/isolation" className="hover:text-nico-green">Isolation</Link>
+              </li>
+              <li>
+                <Link to="/services/demoussage" className="hover:text-nico-green">Démoussage</Link>
+              </li>
+              <li>
+                <Link to="/services/nettoyage" className="hover:text-nico-green">Nettoyage</Link>
+              </li>
+              <li>
+                <Link to="/services/espaces-verts" className="hover:text-nico-green">Espaces verts</Link>
+              </li>
+              <li>
+                <Link to="/services/travaux-interieur" className="hover:text-nico-green">Travaux intérieur</Link>
+              </li>
+              <li>
+                <Link to="/services/peinture" className="hover:text-nico-green">Peinture</Link>
+              </li>
+              <li>
+                <Link to="/zone-intervention" className="hover:text-nico-green">Zone d'intervention</Link>
               </li>
               <li>
                 <Link to="/contact" className="hover:text-nico-green">Contact</Link>
