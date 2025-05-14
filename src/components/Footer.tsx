@@ -9,28 +9,10 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white pt-12 pb-6">
       <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          {/* Logo & Info */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          {/* Contact Column */}
           <div>
-            <Link to="/">
-              <img 
-                src="/lovable-uploads/28266287-7f07-4321-b5ca-a517dbcdcc45.png" 
-                alt="Nico Rénovation Logo" 
-                className="h-24 w-auto bg-white rounded-full p-1 mb-4" 
-              />
-            </Link>
-            <p className="text-gray-300 mb-4">
-              Votre spécialiste en couverture et entretien à Châteaubriant et ses environs.
-            </p>
-            <div className="flex items-center space-x-2 text-nico-green">
-              <span className="px-2 py-1 border border-nico-green rounded-md text-xs font-medium">Artisan qualifié</span>
-              <span className="px-2 py-1 border border-nico-green rounded-md text-xs font-medium">SIRET : 511 820 763 00023</span>
-            </div>
-          </div>
-          
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-xl font-bold mb-4 border-b border-gray-700 pb-2">Contact</h3>
+            <h3 className="text-xl font-bold mb-6 border-b border-gray-700 pb-2">Contact</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="mr-2 text-nico-red flex-shrink-0 mt-1" size={18} />
@@ -51,44 +33,34 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Quick Links - Improved layout */}
+          {/* Liens rapides Column */}
           <div>
-            <h3 className="text-xl font-bold mb-4 border-b border-gray-700 pb-2">Liens rapides</h3>
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8">
+            <h3 className="text-xl font-bold mb-6 border-b border-gray-700 pb-2">Liens rapides</h3>
+            <div className="grid grid-cols-2 gap-x-8">
               <div>
-                <ul className="space-y-2">
-                  <li>
-                    <Link to="/" className="hover:text-nico-green">Accueil</Link>
-                  </li>
-                  <li>
-                    <Link to="/zone-intervention" className="hover:text-nico-green">Zone d'intervention</Link>
-                  </li>
-                  <li>
-                    <Link to="/contact" className="hover:text-nico-green">Contact</Link>
-                  </li>
-                </ul>
+                <Link to="/" className="block mb-2 hover:text-nico-green">Accueil</Link>
+                <Link to="/zone-intervention" className="block mb-2 hover:text-nico-green">Zone d'intervention</Link>
+                <Link to="/contact" className="block mb-2 hover:text-nico-green">Contact</Link>
               </div>
               <div>
                 <p className="font-medium mb-2">Services</p>
-                <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-                  <Link to="/services/reparation-toiture" className="hover:text-nico-green">Réparation toiture</Link>
-                  <Link to="/services/demoussage" className="hover:text-nico-green">Démoussage</Link>
-                  <Link to="/services/gouttieres" className="hover:text-nico-green">Gouttières</Link>
-                  <Link to="/services/nettoyage" className="hover:text-nico-green">Nettoyage</Link>
-                  <Link to="/services/ramonage" className="hover:text-nico-green">Ramonage</Link>
-                  <Link to="/services/espaces-verts" className="hover:text-nico-green">Espaces verts</Link>
-                  <Link to="/services/isolation" className="hover:text-nico-green">Isolation</Link>
-                  <Link to="/services/travaux-exterieur" className="hover:text-nico-green">Travaux extérieur</Link>
-                  <Link to="/services/peinture" className="hover:text-nico-green">Peinture</Link>
-                </div>
+                <Link to="/services/reparation-toiture" className="block mb-2 hover:text-nico-green">Réparation toiture</Link>
+                <Link to="/services/demoussage" className="block mb-2 hover:text-nico-green">Démoussage</Link>
+                <Link to="/services/gouttieres" className="block mb-2 hover:text-nico-green">Gouttières</Link>
+                <Link to="/services/nettoyage" className="block mb-2 hover:text-nico-green">Nettoyage</Link>
+                <Link to="/services/ramonage" className="block mb-2 hover:text-nico-green">Ramonage</Link>
+                <Link to="/services/espaces-verts" className="block mb-2 hover:text-nico-green">Espaces verts</Link>
+                <Link to="/services/isolation" className="block mb-2 hover:text-nico-green">Isolation</Link>
+                <Link to="/services/travaux-exterieur" className="block mb-2 hover:text-nico-green">Travaux extérieur</Link>
+                <Link to="/services/peinture" className="block mb-2 hover:text-nico-green">Peinture</Link>
               </div>
             </div>
           </div>
           
-          {/* Social & CTA */}
+          {/* Suivez-nous Column */}
           <div>
-            <h3 className="text-xl font-bold mb-4 border-b border-gray-700 pb-2">Suivez-nous</h3>
-            <div className="flex space-x-4 mb-6">
+            <h3 className="text-xl font-bold mb-6 border-b border-gray-700 pb-2">Suivez-nous</h3>
+            <div className="flex mb-6">
               <a 
                 href="https://www.facebook.com/nico.renovationcouverture" 
                 target="_blank" 
@@ -100,6 +72,7 @@ const Footer = () => {
                 </svg>
               </a>
             </div>
+            
             <Link 
               to="/contact" 
               className="bg-nico-red hover:bg-red-700 text-white px-4 py-2 rounded-md font-medium inline-flex items-center"
@@ -107,6 +80,18 @@ const Footer = () => {
               Demander un devis gratuit
               <ExternalLink size={16} className="ml-1" />
             </Link>
+            
+            <div className="mt-4">
+              <img 
+                src="/lovable-uploads/28266287-7f07-4321-b5ca-a517dbcdcc45.png" 
+                alt="Nico Rénovation Logo" 
+                className="h-20 w-auto bg-white rounded-full p-1" 
+              />
+              <div className="flex flex-wrap items-center space-x-2 mt-3 text-nico-green">
+                <span className="px-2 py-1 border border-nico-green rounded-md text-xs font-medium">Artisan qualifié</span>
+                <span className="px-2 py-1 border border-nico-green rounded-md text-xs font-medium">SIRET : 511 820 763 00023</span>
+              </div>
+            </div>
           </div>
         </div>
         
