@@ -2,7 +2,7 @@
 import React from 'react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Card, CardContent } from '@/components/ui/card';
-import { Gallery, Image } from 'lucide-react';
+import { ImageIcon } from 'lucide-react';
 
 interface PortfolioItem {
   id: string;
@@ -42,7 +42,7 @@ const Portfolio: React.FC<PortfolioProps> = ({
                   />
                 </AspectRatio>
                 <div className="absolute top-2 right-2 bg-nico-blue text-white p-1.5 rounded-full">
-                  <Gallery size={16} />
+                  <ImageIcon size={16} />
                 </div>
               </div>
               <CardContent className="p-4">
