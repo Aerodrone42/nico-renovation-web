@@ -51,58 +51,37 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Quick Links - Restructured into columns */}
+          {/* Quick Links - Improved layout */}
           <div>
             <h3 className="text-xl font-bold mb-4 border-b border-gray-700 pb-2">Liens rapides</h3>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8">
               <div>
                 <ul className="space-y-2">
                   <li>
                     <Link to="/" className="hover:text-nico-green">Accueil</Link>
                   </li>
                   <li>
-                    <Link to="/services/reparation-toiture" className="hover:text-nico-green">Réparation toiture</Link>
+                    <Link to="/zone-intervention" className="hover:text-nico-green">Zone d'intervention</Link>
                   </li>
                   <li>
-                    <Link to="/services/gouttieres" className="hover:text-nico-green">Gouttières</Link>
-                  </li>
-                  <li>
-                    <Link to="/services/ramonage" className="hover:text-nico-green">Ramonage</Link>
-                  </li>
-                  <li>
-                    <Link to="/services/isolation" className="hover:text-nico-green">Isolation</Link>
+                    <Link to="/contact" className="hover:text-nico-green">Contact</Link>
                   </li>
                 </ul>
               </div>
               <div>
-                <ul className="space-y-2">
-                  <li>
-                    <Link to="/services/demoussage" className="hover:text-nico-green">Démoussage</Link>
-                  </li>
-                  <li>
-                    <Link to="/services/nettoyage" className="hover:text-nico-green">Nettoyage</Link>
-                  </li>
-                  <li>
-                    <Link to="/services/espaces-verts" className="hover:text-nico-green">Espaces verts</Link>
-                  </li>
-                  <li>
-                    <Link to="/services/travaux-exterieur" className="hover:text-nico-green">Travaux extérieur</Link>
-                  </li>
-                  <li>
-                    <Link to="/services/peinture" className="hover:text-nico-green">Peinture</Link>
-                  </li>
-                </ul>
+                <p className="font-medium mb-2">Services</p>
+                <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+                  <Link to="/services/reparation-toiture" className="hover:text-nico-green">Réparation toiture</Link>
+                  <Link to="/services/demoussage" className="hover:text-nico-green">Démoussage</Link>
+                  <Link to="/services/gouttieres" className="hover:text-nico-green">Gouttières</Link>
+                  <Link to="/services/nettoyage" className="hover:text-nico-green">Nettoyage</Link>
+                  <Link to="/services/ramonage" className="hover:text-nico-green">Ramonage</Link>
+                  <Link to="/services/espaces-verts" className="hover:text-nico-green">Espaces verts</Link>
+                  <Link to="/services/isolation" className="hover:text-nico-green">Isolation</Link>
+                  <Link to="/services/travaux-exterieur" className="hover:text-nico-green">Travaux extérieur</Link>
+                  <Link to="/services/peinture" className="hover:text-nico-green">Peinture</Link>
+                </div>
               </div>
-            </div>
-            <div className="mt-2">
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/zone-intervention" className="hover:text-nico-green">Zone d'intervention</Link>
-                </li>
-                <li>
-                  <Link to="/contact" className="hover:text-nico-green">Contact</Link>
-                </li>
-              </ul>
             </div>
           </div>
           
