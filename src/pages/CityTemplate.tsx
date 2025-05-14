@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { MapPin, CheckCircle2, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import CTABanner from '@/components/CTABanner';
+import Portfolio from '@/components/Portfolio';
 
 interface CityTemplateProps {
   city: string;
@@ -21,6 +22,52 @@ const CityTemplate: React.FC<CityTemplateProps> = ({ city, neighboringCities, co
     'Élagage / Débroussaillage',
     'Taille de haie',
     'Peinture intérieure et extérieure'
+  ];
+
+  // Portfolio items to display for each city
+  const portfolioItems = [
+    {
+      id: 'roof-repair-1',
+      imagePath: '/lovable-uploads/a4df8109-215e-4e31-b349-bd49dd06c510.png',
+      title: 'Rénovation toiture ardoise',
+      description: 'Réfection complète de toiture avec pose de fenêtres de toit'
+    },
+    {
+      id: 'roof-repair-2',
+      imagePath: '/lovable-uploads/dcf5c540-1674-4bc6-8404-dc17ff7f4ec6.png',
+      title: 'Installation de charpente',
+      description: 'Pose de structure en bois pour nouvelle toiture'
+    },
+    {
+      id: 'masonry-1',
+      imagePath: '/lovable-uploads/7ad3308f-4679-44b3-aa3d-541a08b1b7cb.png',
+      title: 'Rénovation escalier',
+      description: 'Création d\'un escalier en béton désactivé avec rampe'
+    },
+    {
+      id: 'roofing-1',
+      imagePath: '/lovable-uploads/7bfc0cf3-beba-4be7-ab14-00d7dfec5018.png',
+      title: 'Couverture traditionnelle',
+      description: 'Pose de liteaux bois et préparation de toiture traditionnelle'
+    },
+    {
+      id: 'roofing-2',
+      imagePath: '/lovable-uploads/0e56a828-32fb-4d31-8868-23973461781c.png',
+      title: 'Ardoises naturelles',
+      description: 'Finition de toiture en ardoises sur longère ancienne'
+    },
+    {
+      id: 'chimney-1',
+      imagePath: '/lovable-uploads/2fc0d9c6-f0f6-466a-a3fd-26622894e000.png',
+      title: 'Conduit de cheminée',
+      description: 'Entretien et nettoyage de conduit pour ramonage'
+    },
+    {
+      id: 'chimney-2',
+      imagePath: '/lovable-uploads/d5bf19c8-2947-4b05-a287-54f6d53b9fb3.png',
+      title: 'Rénovation de souche',
+      description: 'Réparation et enduit de souche de cheminée'
+    }
   ];
 
   return (
@@ -132,6 +179,13 @@ const CityTemplate: React.FC<CityTemplateProps> = ({ city, neighboringCities, co
           </div>
         </div>
       </div>
+      
+      {/* Portfolio Section */}
+      <Portfolio 
+        title={`Nos réalisations à ${city} et alentours`}
+        description={`Découvrez quelques exemples de nos travaux récents de toiture, ramonage et entretien extérieur à ${city} et dans les communes voisines.`}
+        items={portfolioItems}
+      />
       
       <CTABanner />
     </div>
