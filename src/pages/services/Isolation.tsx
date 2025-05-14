@@ -1,6 +1,7 @@
 
 import React from 'react';
 import ServiceTemplate from '../ServiceTemplate';
+import Portfolio from '@/components/Portfolio';
 
 const Isolation = () => {
   const benefits = [
@@ -10,6 +11,27 @@ const Isolation = () => {
     'Isolation phonique renforcée',
     'Solutions adaptées à votre budget',
     'Éligibilité aux aides financières'
+  ];
+  
+  const portfolioItems = [
+    {
+      id: '1',
+      imagePath: '/lovable-uploads/defca239-af33-4969-8d62-98b417d50e57.png',
+      title: 'Isolation sous toiture',
+      description: 'Pose de matériaux isolants sous les tuiles pour une isolation optimale'
+    },
+    {
+      id: '2',
+      imagePath: '/lovable-uploads/11238821-f70a-489b-b67f-886521d897f8.png',
+      title: 'Isolation de fenêtre de toit',
+      description: 'Traitement spécifique des contours de fenêtre pour éviter les ponts thermiques'
+    },
+    {
+      id: '3',
+      imagePath: '/lovable-uploads/e1e1108e-6b42-4b17-8e4f-e511d8cd032e.png',
+      title: 'Aménagement de combles',
+      description: 'Isolation de combles aménageables avec traitement des structures apparentes'
+    }
   ];
   
   const content = (
@@ -82,6 +104,13 @@ const Isolation = () => {
         <li>Éco-prêt à taux zéro</li>
         <li>Aides locales</li>
       </ul>
+      
+      <h3>Nos réalisations</h3>
+      <Portfolio 
+        title="Nos travaux d'isolation" 
+        description="Découvrez quelques exemples de nos projets d'isolation de toiture et aménagement de combles"
+        items={portfolioItems}
+      />
     </>
   );
   
