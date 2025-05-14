@@ -34,7 +34,7 @@ const Portfolio: React.FC<PortfolioProps> = ({
           {items.map((item) => (
             <Card key={item.id} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="relative">
-                <AspectRatio ratio={4/3}>
+                <AspectRatio ratio={4/3} className="w-full">
                   <img 
                     src={item.imagePath} 
                     alt={item.title} 

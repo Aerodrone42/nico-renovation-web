@@ -2,6 +2,7 @@
 import React from 'react';
 import ServiceTemplate from '../ServiceTemplate';
 import Portfolio from '@/components/Portfolio';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const Demoussage = () => {
   const benefits = [
@@ -48,16 +49,24 @@ const Demoussage = () => {
       </ul>
       
       <div className="my-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-        <img 
-          src="/lovable-uploads/6a51b4a3-6a10-4716-8320-4de5ca5c6aed.png" 
-          alt="Toiture avant démoussage" 
-          className="rounded-lg shadow-md"
-        />
-        <img 
-          src="/lovable-uploads/e6fd405c-9bb2-48e8-a01b-b86b463d7e16.png" 
-          alt="Toiture après démoussage" 
-          className="rounded-lg shadow-md"
-        />
+        <div className="rounded-lg shadow-md overflow-hidden">
+          <AspectRatio ratio={4/3}>
+            <img 
+              src="/lovable-uploads/6a51b4a3-6a10-4716-8320-4de5ca5c6aed.png" 
+              alt="Toiture avant démoussage" 
+              className="w-full h-full object-cover"
+            />
+          </AspectRatio>
+        </div>
+        <div className="rounded-lg shadow-md overflow-hidden">
+          <AspectRatio ratio={4/3}>
+            <img 
+              src="/lovable-uploads/e6fd405c-9bb2-48e8-a01b-b86b463d7e16.png" 
+              alt="Toiture après démoussage" 
+              className="w-full h-full object-cover"
+            />
+          </AspectRatio>
+        </div>
       </div>
       
       <h3>Notre procédé de démoussage</h3>
