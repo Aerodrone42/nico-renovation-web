@@ -1,6 +1,7 @@
 
 import React from 'react';
 import ServiceTemplate from '../ServiceTemplate';
+import Portfolio from '@/components/Portfolio';
 
 const Peinture = () => {
   const benefits = [
@@ -10,6 +11,39 @@ const Peinture = () => {
     'Peintures de qualité professionnelle',
     'Protection des zones non traitées',
     'Devis détaillé et gratuit'
+  ];
+  
+  const portfolioItems = [
+    {
+      id: '1',
+      imagePath: '/lovable-uploads/9ec75a99-9060-4d16-b218-105c642b7170.png',
+      title: 'Travaux de lasure sur bois',
+      description: 'Application de lasure sur terrasse en bois'
+    },
+    {
+      id: '2',
+      imagePath: '/lovable-uploads/706b54ed-4250-4772-8cb4-19424d03c4bc.png',
+      title: 'Finition mur et boiseries',
+      description: 'Peinture et habillage bois pour intérieur'
+    },
+    {
+      id: '3',
+      imagePath: '/lovable-uploads/02a354d0-b1e6-49e8-a9c0-e50a73f1516c.png',
+      title: 'Travaux de façade',
+      description: 'Application d\'enduit décoratif sur façade extérieure'
+    },
+    {
+      id: '4',
+      imagePath: '/lovable-uploads/a43f8539-1e38-441f-bdf3-9f6e87dbbe37.png',
+      title: 'Rénovation façade complète',
+      description: 'Avant: façade à rénover'
+    },
+    {
+      id: '5',
+      imagePath: '/lovable-uploads/66d3596e-e27a-4e93-b81a-ff28f0523e64.png',
+      title: 'Façade rénovée',
+      description: 'Après: façade rénovée avec enduit neuf'
+    }
   ];
   
   const content = (
@@ -88,6 +122,13 @@ const Peinture = () => {
         <li><strong>Peintures spéciales :</strong> Anti-humidité, anti-moisissures, thermiques</li>
         <li><strong>Lasures et vernis :</strong> Protection et décoration des boiseries</li>
       </ul>
+      
+      <h3>Nos réalisations en peinture</h3>
+      <Portfolio 
+        title="Exemples de nos travaux de peinture" 
+        description="Découvrez quelques-unes de nos réalisations récentes en peinture intérieure et extérieure" 
+        items={portfolioItems} 
+      />
     </>
   );
   
