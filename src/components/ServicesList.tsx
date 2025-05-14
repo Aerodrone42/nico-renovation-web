@@ -41,7 +41,7 @@ const services = [
   {
     id: 'isolation',
     title: 'Isolation',
-    description: 'Solutions d'isolation pour toiture et combles pour améliorer l'efficacité énergétique de votre habitat.',
+    description: 'Solutions d\'isolation pour toiture et combles pour améliorer l\'efficacité énergétique de votre habitat.',
     icon: Thermometer,
     path: '/services/isolation',
     image: '/lovable-uploads/4d02d39b-c9c8-4bb7-9e12-8f0c901fd78b.png'

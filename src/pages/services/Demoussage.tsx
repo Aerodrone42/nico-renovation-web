@@ -5,9 +5,9 @@ import ServiceTemplate from '../ServiceTemplate';
 const Demoussage = () => {
   const benefits = [
     'Prolongation de la durée de vie de votre toiture',
-    'Amélioration de l'esthétique de votre habitation',
+    'Amélioration de l\'esthétique de votre habitation',
     'Traitement préventif contre les mousses et lichens',
-    'Intervention respectueuse de l'environnement',
+    'Intervention respectueuse de l\'environnement',
     'Protection contre les infiltrations',
     'Devis et déplacement gratuits'
   ];
