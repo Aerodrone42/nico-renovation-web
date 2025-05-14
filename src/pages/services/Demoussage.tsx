@@ -1,6 +1,7 @@
 
 import React from 'react';
 import ServiceTemplate from '../ServiceTemplate';
+import Portfolio from '@/components/Portfolio';
 
 const Demoussage = () => {
   const benefits = [
@@ -10,6 +11,21 @@ const Demoussage = () => {
     'Intervention respectueuse de l\'environnement',
     'Protection contre les infiltrations',
     'Devis et déplacement gratuits'
+  ];
+
+  const portfolioItems = [
+    {
+      id: 'demo-1',
+      imagePath: '/lovable-uploads/6a51b4a3-6a10-4716-8320-4de5ca5c6aed.png',
+      title: 'Démoussage d\'une toiture résidentielle',
+      description: 'Traitement complet - Avant et après'
+    },
+    {
+      id: 'demo-2',
+      imagePath: '/lovable-uploads/e6fd405c-9bb2-48e8-a01b-b86b463d7e16.png',
+      title: 'Toiture nettoyée',
+      description: 'Construction neuve, toiture entièrement traitée'
+    }
   ];
   
   const content = (
@@ -33,12 +49,12 @@ const Demoussage = () => {
       
       <div className="my-8 grid grid-cols-1 md:grid-cols-2 gap-4">
         <img 
-          src="/lovable-uploads/58635cf1-45b9-4635-9395-f2d2f6bba8c8.png" 
+          src="/lovable-uploads/6a51b4a3-6a10-4716-8320-4de5ca5c6aed.png" 
           alt="Toiture avant démoussage" 
           className="rounded-lg shadow-md"
         />
         <img 
-          src="/lovable-uploads/4d02d39b-c9c8-4bb7-9e12-8f0c901fd78b.png" 
+          src="/lovable-uploads/e6fd405c-9bb2-48e8-a01b-b86b463d7e16.png" 
           alt="Toiture après démoussage" 
           className="rounded-lg shadow-md"
         />
@@ -79,6 +95,13 @@ const Demoussage = () => {
       <p>
         En complément du démoussage, nous recommandons un traitement préventif qui ralentit considérablement la réapparition des mousses et lichens. Cette protection durable vous permet de préserver l'aspect et l'intégrité de votre toiture plus longtemps.
       </p>
+
+      <h3>Nos réalisations</h3>
+      <Portfolio 
+        title="Nos réalisations de démoussage"
+        description="Découvrez nos travaux récents de démoussage de toitures"
+        items={portfolioItems}
+      />
     </>
   );
   
