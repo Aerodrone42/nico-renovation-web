@@ -1,6 +1,7 @@
 
 import React from 'react';
 import ServiceTemplate from '../ServiceTemplate';
+import Portfolio from '@/components/Portfolio';
 
 const ReparationToiture = () => {
   const benefits = [
@@ -10,6 +11,39 @@ const ReparationToiture = () => {
     'Matériaux de qualité',
     'Artisan expérimenté',
     'Tarifs compétitifs'
+  ];
+  
+  const portfolioItems = [
+    {
+      id: '1',
+      imagePath: '/lovable-uploads/e6e29108-1f47-4e88-9481-08ba13d7f5dd.png',
+      title: 'Rénovation charpente',
+      description: 'Réparation complète et remplacement de la charpente endommagée'
+    },
+    {
+      id: '2',
+      imagePath: '/lovable-uploads/a4cd46a2-2f26-4529-898d-15fb6ffff3b7.png',
+      title: 'Restauration de toiture',
+      description: 'Restauration de toiture ancienne avec conservation des éléments d\'origine'
+    },
+    {
+      id: '3',
+      imagePath: '/lovable-uploads/3b939988-a7e6-4d48-a10c-6d5819fc4d2d.png',
+      title: 'Installation charpente neuve',
+      description: 'Pose complète d\'une nouvelle charpente traditionnelle en bois'
+    },
+    {
+      id: '4',
+      imagePath: '/lovable-uploads/97bd76ad-18aa-4c34-90f6-a388b55c33d3.png',
+      title: 'Réfection toiture ardoise',
+      description: 'Réfection complète d\'une toiture en ardoise naturelle'
+    },
+    {
+      id: '5',
+      imagePath: '/lovable-uploads/d0740f07-031f-4994-b666-ff4b2a7c6574.png',
+      title: 'Couverture en ardoise',
+      description: 'Finition soignée d\'une couverture en ardoise avec faîtage'
+    }
   ];
   
   const content = (
@@ -61,13 +95,20 @@ const ReparationToiture = () => {
   );
   
   return (
-    <ServiceTemplate
-      title="Réparation de toiture"
-      description="Service professionnel de réparation et entretien de toiture pour tous types de couvertures : tuiles, ardoises, zinc."
-      imagePath="/lovable-uploads/4d02d39b-c9c8-4bb7-9e12-8f0c901fd78b.png"
-      benefits={benefits}
-      content={content}
-    />
+    <>
+      <ServiceTemplate
+        title="Réparation de toiture"
+        description="Service professionnel de réparation et entretien de toiture pour tous types de couvertures : tuiles, ardoises, zinc."
+        imagePath="/lovable-uploads/4d02d39b-c9c8-4bb7-9e12-8f0c901fd78b.png"
+        benefits={benefits}
+        content={content}
+      />
+      <Portfolio 
+        title="Nos réalisations de toiture" 
+        description="Découvrez quelques exemples de nos travaux de réparation et rénovation de toiture dans la région de Châteaubriant" 
+        items={portfolioItems} 
+      />
+    </>
   );
 };
 
