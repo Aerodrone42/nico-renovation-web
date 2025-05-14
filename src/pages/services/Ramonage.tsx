@@ -79,7 +79,7 @@ const Ramonage = () => {
     <ServiceTemplate
       title="Ramonage professionnel"
       description="Service de ramonage de cheminées, poêles et conduits pour assurer votre sécurité et optimiser votre chauffage."
-      imagePath="/lovable-uploads/4d02d39b-c9c8-4bb7-9e12-8f0c901fd78b.png"
+      imagePath="/lovable-uploads/7559f4b9-c033-453d-b663-7e853254a088.png"
       benefits={benefits}
       content={content}
     />
