@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ServiceTemplate from '../ServiceTemplate';
 import Portfolio from '@/components/Portfolio';
@@ -82,13 +81,6 @@ const TravauxExterieur = () => {
         <li><strong>Petite maçonnerie :</strong> Murets, piliers, bordures</li>
       </ul>
       
-      <div className="my-8">
-        <img 
-          src="/lovable-uploads/ae909c66-a968-4fc7-92b8-b88d8a3fbb12.png" 
-          alt="Travaux extérieur" 
-          className="rounded-lg shadow-md w-full"
-        />
-      </div>
       
       <h3>Menuiserie extérieure</h3>
       <p>
