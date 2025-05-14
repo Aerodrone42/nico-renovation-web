@@ -1,6 +1,8 @@
 
 import React from 'react';
 import ServiceTemplate from '../ServiceTemplate';
+import Portfolio from '@/components/Portfolio';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const EspacesVerts = () => {
   const benefits = [
@@ -10,6 +12,33 @@ const EspacesVerts = () => {
     'Respect de la saisonnalité des végétaux',
     'Conseils personnalisés pour votre jardin',
     'Devis gratuit et sans engagement'
+  ];
+  
+  const portfolioItems = [
+    {
+      id: '1',
+      imagePath: '/lovable-uploads/33a163e3-3930-46e9-b9c0-0182e90a45e1.png',
+      title: 'Aménagement de jardin avec gazon',
+      description: 'Aménagement paysager avec gazon, massifs de pierres et olivier'
+    },
+    {
+      id: '2',
+      imagePath: '/lovable-uploads/6c5cb0ce-62d2-414c-b4ab-639123e06803.png',
+      title: 'Entretien de haie',
+      description: 'Haie de lauriers parfaitement entretenue'
+    },
+    {
+      id: '3',
+      imagePath: '/lovable-uploads/3e6dd1e2-5666-46a7-adb9-c22b6bcf79e2.png',
+      title: 'Taille de haie de thuyas',
+      description: 'Haie de thuyas taillée avec précision'
+    },
+    {
+      id: '4',
+      imagePath: '/lovable-uploads/adc770fb-633c-4edf-a23c-88bed5635bb7.png',
+      title: 'Entretien de haie de conifères',
+      description: 'Haie de conifères parfaitement maintenue'
+    }
   ];
   
   const content = (
@@ -31,11 +60,13 @@ const EspacesVerts = () => {
       </ul>
       
       <div className="my-8">
-        <img 
-          src="/lovable-uploads/ae909c66-a968-4fc7-92b8-b88d8a3fbb12.png" 
-          alt="Entretien espaces verts" 
-          className="rounded-lg shadow-md w-full"
-        />
+        <AspectRatio ratio={16/9} className="rounded-lg shadow-md overflow-hidden">
+          <img 
+            src="/lovable-uploads/33a163e3-3930-46e9-b9c0-0182e90a45e1.png" 
+            alt="Aménagement de jardin" 
+            className="w-full h-full object-cover"
+          />
+        </AspectRatio>
       </div>
       
       <h3>Taille de haies professionnelle</h3>
@@ -53,6 +84,27 @@ const EspacesVerts = () => {
       <p>
         Notre équipe maîtrise les techniques de taille pour favoriser la densification de vos haies tout en respectant leur santé et leur croissance naturelle. Nous apportons un soin particulier à la régularité et à l'esthétique de la coupe.
       </p>
+      
+      <div className="my-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="rounded-lg shadow-md overflow-hidden">
+          <AspectRatio ratio={4/3}>
+            <img 
+              src="/lovable-uploads/3e6dd1e2-5666-46a7-adb9-c22b6bcf79e2.png" 
+              alt="Taille de haie de thuyas" 
+              className="w-full h-full object-cover"
+            />
+          </AspectRatio>
+        </div>
+        <div className="rounded-lg shadow-md overflow-hidden">
+          <AspectRatio ratio={4/3}>
+            <img 
+              src="/lovable-uploads/6c5cb0ce-62d2-414c-b4ab-639123e06803.png" 
+              alt="Entretien de haie de lauriers" 
+              className="w-full h-full object-cover"
+            />
+          </AspectRatio>
+        </div>
+      </div>
       
       <h3>Les avantages d'un entretien régulier</h3>
       <ul>
@@ -81,6 +133,13 @@ const EspacesVerts = () => {
           <strong>Suivi :</strong> Conseils d'entretien entre nos interventions
         </li>
       </ol>
+      
+      <h3>Nos dernières réalisations</h3>
+      <Portfolio 
+        title="Galerie de nos travaux d'espaces verts" 
+        description="Découvrez quelques exemples de nos réalisations récentes en aménagement et entretien d'espaces verts" 
+        items={portfolioItems} 
+      />
     </>
   );
   
@@ -88,7 +147,7 @@ const EspacesVerts = () => {
     <ServiceTemplate
       title="Entretien d'espaces verts"
       description="Services professionnels d'entretien de jardin, tonte de pelouse et taille de haies pour des extérieurs soignés."
-      imagePath="/lovable-uploads/ae909c66-a968-4fc7-92b8-b88d8a3fbb12.png"
+      imagePath="/lovable-uploads/33a163e3-3930-46e9-b9c0-0182e90a45e1.png"
       benefits={benefits}
       content={content}
     />
