@@ -1,6 +1,7 @@
 
 import React from 'react';
 import ServiceTemplate from '../ServiceTemplate';
+import Portfolio from '@/components/Portfolio';
 
 const Gouttieres = () => {
   const benefits = [
@@ -10,6 +11,33 @@ const Gouttieres = () => {
     'Résistance et durabilité garanties',
     'Intervention rapide et professionnelle',
     'Devis gratuit et sans engagement'
+  ];
+  
+  const portfolioItems = [
+    {
+      id: '1',
+      imagePath: '/lovable-uploads/aa845a7b-8787-4bfd-81ae-00d8270a05d9.png',
+      title: 'Gouttière avec protège-feuilles',
+      description: 'Installation d\'une gouttière avec grille de protection sur toit en ardoise'
+    },
+    {
+      id: '2',
+      imagePath: '/lovable-uploads/b6136622-f643-4dc4-9ef9-34bfd6480859.png',
+      title: 'Gouttière zinc',
+      description: 'Gouttière en zinc installée le long d\'une toiture terrasse'
+    },
+    {
+      id: '3',
+      imagePath: '/lovable-uploads/9891a853-5977-4bc9-afb9-91a48cf85eec.png',
+      title: 'Installation sur charpente',
+      description: 'Pose de gouttière pendant des travaux de rénovation de toiture'
+    },
+    {
+      id: '4',
+      imagePath: '/lovable-uploads/9dd777a9-6dd1-4b4a-bb10-db067b379d10.png',
+      title: 'Toiture zinc complète',
+      description: 'Vue d\'ensemble d\'une toiture en zinc avec gouttières intégrées'
+    }
   ];
   
   const content = (
@@ -65,6 +93,13 @@ const Gouttieres = () => {
         <li><strong>Gouttières en PVC :</strong> Économiques et faciles à entretenir</li>
         <li><strong>Gouttières en aluminium :</strong> Légères et résistantes à la corrosion</li>
       </ul>
+      
+      <h3>Nos réalisations</h3>
+      <Portfolio 
+        title="Nos travaux de gouttières" 
+        description="Découvrez quelques exemples de nos installations et rénovations de gouttières"
+        items={portfolioItems}
+      />
     </>
   );
   
