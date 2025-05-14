@@ -29,7 +29,7 @@ const Header = () => {
     { title: 'Démoussage de toiture', path: '/services/demoussage' },
     { title: 'Nettoyage', path: '/services/nettoyage' },
     { title: 'Entretien espaces verts', path: '/services/espaces-verts' },
-    { title: 'Travaux intérieur', path: '/services/travaux-interieur' },
+    { title: 'Travaux extérieur', path: '/services/travaux-exterieur' },
     { title: 'Peinture', path: '/services/peinture' },
   ];
 

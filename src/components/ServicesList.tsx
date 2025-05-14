@@ -71,11 +71,11 @@ const services = [
     image: '/lovable-uploads/ae909c66-a968-4fc7-92b8-b88d8a3fbb12.png'
   },
   {
-    id: 'travaux-interieur',
-    title: 'Travaux intérieur',
-    description: 'Rénovation et petits travaux pour l\'intérieur de votre maison.',
+    id: 'travaux-exterieur',
+    title: 'Travaux extérieur',
+    description: 'Menuiserie, dallage, carrelage et rénovation de façade pour l\'extérieur de votre maison.',
     icon: Construction,
-    path: '/services/travaux-interieur',
+    path: '/services/travaux-exterieur',
     image: '/lovable-uploads/ae909c66-a968-4fc7-92b8-b88d8a3fbb12.png'
   },
   {
