@@ -34,12 +34,9 @@ export default defineConfig(({ mode }) => ({
       output: {
         // Assure que les fichiers statiques sont copiés dans le dossier de sortie
         assetFileNames: (assetInfo) => {
-          // Vérification que assetInfo.name existe avec une gestion de type plus robuste
-          if (!assetInfo.name) {
-            return 'assets/[name]-[hash][extname]';
-          }
+          const fileName = assetInfo.name as string;
+          const ext = fileName.split('.').pop();
           
-          const ext = assetInfo.name.split('.').pop();
           if (ext === 'xml' || ext === 'txt') {
             return '[name][extname]';
           }
