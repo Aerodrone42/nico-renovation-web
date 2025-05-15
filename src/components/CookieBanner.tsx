@@ -16,7 +16,7 @@ const CookieBanner = () => {
     if (!cookieConsent) {
       // Show banner after a short delay
       const timer = setTimeout(() => {
-        setOpen(true);
+        setAccepted(false);
       }, 1000);
       return () => clearTimeout(timer);
     } else {
@@ -47,18 +47,18 @@ const CookieBanner = () => {
   if (accepted) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-t border-gray-200 dark:border-gray-800 shadow-lg">
-      <div className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4">
+    <div className="fixed bottom-0 left-0 right-0 z-50 px-4 py-2 bg-white/95 dark:bg-gray-900/95 border-t border-gray-200 dark:border-gray-800 shadow-md">
+      <div className="container mx-auto max-w-7xl flex flex-wrap items-center justify-between gap-2 text-sm">
         <div className="flex items-center gap-2">
-          <Cookie size={24} className="text-nico-green" />
-          <p className="text-sm text-gray-700 dark:text-gray-300">
-            Nous utilisons des cookies pour améliorer votre expérience sur notre site.
+          <Cookie size={18} className="text-nico-green" />
+          <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-300">
+            Ce site utilise des cookies pour améliorer votre expérience.
           </p>
         </div>
-        <div className="flex gap-3 shrink-0">
+        <div className="flex gap-2 shrink-0">
           <AlertDialog open={open} onOpenChange={setOpen}>
             <AlertDialogTrigger asChild>
-              <Button variant="outline" size="sm">Plus d'infos</Button>
+              <Button variant="link" size="sm" className="text-xs p-0 h-auto">En savoir plus</Button>
             </AlertDialogTrigger>
             <AlertDialogContent>
               <AlertDialogHeader>
@@ -78,8 +78,8 @@ const CookieBanner = () => {
               </AlertDialogFooter>
             </AlertDialogContent>
           </AlertDialog>
-          <Button variant="outline" size="sm" onClick={handleReject}>Refuser</Button>
-          <Button variant="default" size="sm" onClick={handleAccept}>Accepter</Button>
+          <Button variant="outline" size="sm" className="h-7 px-2 text-xs" onClick={handleReject}>Refuser</Button>
+          <Button variant="default" size="sm" className="h-7 px-2 text-xs" onClick={handleAccept}>Accepter</Button>
         </div>
       </div>
     </div>
