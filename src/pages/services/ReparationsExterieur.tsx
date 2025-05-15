@@ -28,7 +28,7 @@ const ReparationsExterieur = () => {
     },
     {
       id: '3',
-      imagePath: '/lovable-uploads/d0740f07-031f-4994-b666-ff4b2a7c6574.png',
+      imagePath: '/lovable-uploads/7ed390df-f465-4f2f-81f9-d67ad40041cc.png',
       title: 'Réparation de volet',
       description: 'Remise en état d\'un volet endommagé'
     },
