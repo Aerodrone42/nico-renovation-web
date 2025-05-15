@@ -20,6 +20,7 @@ import TravauxExterieur from "./pages/services/TravauxExterieur";
 import Peinture from "./pages/services/Peinture";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import CallButton from "./components/CallButton";
 
 const queryClient = new QueryClient();
 
@@ -50,6 +51,7 @@ const App = () => (
             </Routes>
           </main>
           <Footer />
+          <CallButton />
         </div>
       </BrowserRouter>
     </TooltipProvider>
