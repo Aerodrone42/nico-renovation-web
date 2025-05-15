@@ -20,11 +20,17 @@ export default defineConfig(({ mode }) => {
         // Copier sitemap.xml
         if (fs.existsSync('public/sitemap.xml')) {
           fs.copyFileSync('public/sitemap.xml', 'dist/sitemap.xml');
+          console.log('✓ sitemap.xml a été copié avec succès');
+        } else {
+          console.log('⚠️ public/sitemap.xml n\'existe pas');
         }
 
         // Copier robots.txt
         if (fs.existsSync('public/robots.txt')) {
           fs.copyFileSync('public/robots.txt', 'dist/robots.txt');
+          console.log('✓ robots.txt a été copié avec succès');
+        } else {
+          console.log('⚠️ public/robots.txt n\'existe pas');
         }
       }
     };
