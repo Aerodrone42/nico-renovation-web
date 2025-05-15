@@ -24,7 +24,7 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // Configuration pour assurer que les fichiers XML et TXT soient servis correctement
+  // Configuration explicite pour les fichiers statiques
   assetsInclude: ['**/*.xml', '**/*.txt'],
   publicDir: 'public',
   build: {
@@ -32,14 +32,20 @@ export default defineConfig(({ mode }) => ({
     outDir: 'dist',
     rollupOptions: {
       output: {
-        // Assure que les fichiers statiques sont copiés dans le dossier de sortie
+        // Gestion améliorée pour les fichiers statiques
         assetFileNames: (assetInfo) => {
-          const fileName = assetInfo.name as string;
+          if (!assetInfo || !assetInfo.name) {
+            return 'assets/[name]-[hash][extname]';
+          }
+          
+          const fileName = assetInfo.name;
           const ext = fileName.split('.').pop();
           
           if (ext === 'xml' || ext === 'txt') {
+            // Les fichiers XML et TXT sont placés à la racine sans hash
             return '[name][extname]';
           }
+          
           return 'assets/[name]-[hash][extname]';
         }
       }
