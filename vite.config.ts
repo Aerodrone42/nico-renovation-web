@@ -24,31 +24,10 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // Configuration explicite pour les fichiers statiques
-  assetsInclude: ['**/*.xml', '**/*.txt'],
+  // Configuration très simple pour les fichiers statiques
   publicDir: 'public',
   build: {
-    copyPublicDir: true, // S'assure que les fichiers du dossier public sont copiés lors du build
-    outDir: 'dist',
-    rollupOptions: {
-      output: {
-        // Gestion améliorée pour les fichiers statiques
-        assetFileNames: (assetInfo) => {
-          if (!assetInfo || !assetInfo.name) {
-            return 'assets/[name]-[hash][extname]';
-          }
-          
-          const fileName = assetInfo.name;
-          const ext = fileName.split('.').pop();
-          
-          if (ext === 'xml' || ext === 'txt') {
-            // Les fichiers XML et TXT sont placés à la racine sans hash
-            return '[name][extname]';
-          }
-          
-          return 'assets/[name]-[hash][extname]';
-        }
-      }
-    }
+    copyPublicDir: true,
+    outDir: 'dist'
   }
 }));
