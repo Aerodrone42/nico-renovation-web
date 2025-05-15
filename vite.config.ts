@@ -28,13 +28,18 @@ export default defineConfig(({ mode }) => ({
   assetsInclude: ['**/*.xml', '**/*.txt'],
   publicDir: 'public',
   build: {
+    copyPublicDir: true, // S'assure que les fichiers du dossier public sont copiés lors du build
     outDir: 'dist',
     rollupOptions: {
       output: {
         // Assure que les fichiers statiques sont copiés dans le dossier de sortie
         assetFileNames: (assetInfo) => {
-          const info = assetInfo.name || '';
-          const ext = info.split('.').pop();
+          // Vérification que assetInfo.name existe avec une gestion de type plus robuste
+          if (!assetInfo.name) {
+            return 'assets/[name]-[hash][extname]';
+          }
+          
+          const ext = assetInfo.name.split('.').pop();
           if (ext === 'xml' || ext === 'txt') {
             return '[name][extname]';
           }
