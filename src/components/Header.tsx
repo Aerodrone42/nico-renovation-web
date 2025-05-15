@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Phone, Mail } from 'lucide-react';
@@ -28,9 +27,9 @@ const Header = () => {
     { title: 'Isolation', path: '/services/isolation' },
     { title: 'Démoussage de toiture', path: '/services/demoussage' },
     { title: 'Nettoyage', path: '/services/nettoyage' },
-    { title: 'Entretien espaces verts', path: '/services/espaces-verts' },
     { title: 'Travaux extérieur', path: '/services/travaux-exterieur' },
     { title: 'Peinture', path: '/services/peinture' },
+    { title: 'Réparations extérieur', path: '/services/reparations-exterieur' }
   ];
 
   return (
