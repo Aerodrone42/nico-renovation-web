@@ -17,6 +17,7 @@ import Isolation from "./pages/services/Isolation";
 import Nettoyage from "./pages/services/Nettoyage";
 import TravauxExterieur from "./pages/services/TravauxExterieur";
 import Peinture from "./pages/services/Peinture";
+import ReparationsExterieur from "./pages/services/ReparationsExterieur";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import CallButton from "./components/CallButton";
@@ -45,6 +46,7 @@ const App = () => (
               <Route path="/services/nettoyage" element={<Nettoyage />} />
               <Route path="/services/travaux-exterieur" element={<TravauxExterieur />} />
               <Route path="/services/peinture" element={<Peinture />} />
+              <Route path="/services/reparations-exterieur" element={<ReparationsExterieur />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

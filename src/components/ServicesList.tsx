@@ -9,7 +9,8 @@ import {
   PaintBucket, 
   Construction, 
   Waves,
-  ArrowRight
+  ArrowRight,
+  Hammer
 } from 'lucide-react';
 
 const services = [
@@ -76,6 +77,14 @@ const services = [
     icon: PaintBucket,
     path: '/services/peinture',
     image: '/lovable-uploads/ae909c66-a968-4fc7-92b8-b88d8a3fbb12.png'
+  },
+  {
+    id: 'reparations-exterieur',
+    title: 'Réparations extérieur',
+    description: 'Réparation de fuites de toiture, tuiles cassées, volets, dallage, carrelage et autres problèmes extérieurs.',
+    icon: Hammer,
+    path: '/services/reparations-exterieur',
+    image: '/lovable-uploads/4d02d39b-c9c8-4bb7-9e12-8f0c901fd78b.png'
   }
 ];
 
