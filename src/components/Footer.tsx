@@ -41,6 +41,8 @@ const Footer = () => {
                 <Link to="/" className="block mb-2 hover:text-nico-green">Accueil</Link>
                 <Link to="/zone-intervention" className="block mb-2 hover:text-nico-green">Zone d'intervention</Link>
                 <Link to="/contact" className="block mb-2 hover:text-nico-green">Contact</Link>
+                <Link to="/mentions-legales" className="block mb-2 hover:text-nico-green">Mentions légales</Link>
+                <Link to="/politique-confidentialite" className="block mb-2 hover:text-nico-green">Politique de confidentialité</Link>
               </div>
               <div>
                 <p className="font-medium mb-2">Services</p>
@@ -109,6 +111,11 @@ const Footer = () => {
               <ExternalLink size={14} className="ml-1" />
             </a>
           </p>
+          <div className="mt-2 flex items-center justify-center gap-4">
+            <Link to="/mentions-legales" className="hover:text-nico-green">Mentions légales</Link>
+            <span>|</span>
+            <Link to="/politique-confidentialite" className="hover:text-nico-green">Politique de confidentialité</Link>
+          </div>
         </div>
       </div>
     </footer>
