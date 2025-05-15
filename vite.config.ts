@@ -33,7 +33,8 @@ export default defineConfig(({ mode }) => ({
       output: {
         // Assure que les fichiers statiques sont copiés dans le dossier de sortie
         assetFileNames: (assetInfo) => {
-          const ext = assetInfo.name.split('.').pop();
+          const info = assetInfo.name || '';
+          const ext = info.split('.').pop();
           if (ext === 'xml' || ext === 'txt') {
             return '[name][extname]';
           }
