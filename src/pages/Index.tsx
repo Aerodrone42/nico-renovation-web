@@ -21,6 +21,7 @@ const Index = () => {
             <div>
               <span className="text-nico-blue font-semibold mb-2 block">Nos prestations</span>
               <h2 className="text-3xl font-bold text-gray-800">Services de qualité pour votre toiture</h2>
+              <p className="text-gray-600 mt-2">Découvrez nos services professionnels</p>
             </div>
             <Link 
               to="/services" 
