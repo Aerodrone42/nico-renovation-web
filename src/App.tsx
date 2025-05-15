@@ -21,6 +21,7 @@ import ReparationsExterieur from "./pages/services/ReparationsExterieur";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import CallButton from "./components/CallButton";
+import CookieBanner from "./components/CookieBanner";
 
 const queryClient = new QueryClient();
 
@@ -52,6 +53,7 @@ const App = () => (
           </main>
           <Footer />
           <CallButton />
+          <CookieBanner />
         </div>
       </BrowserRouter>
     </TooltipProvider>
