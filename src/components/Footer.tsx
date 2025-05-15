@@ -49,7 +49,6 @@ const Footer = () => {
                 <Link to="/services/gouttieres" className="block mb-2 hover:text-nico-green">Gouttières</Link>
                 <Link to="/services/nettoyage" className="block mb-2 hover:text-nico-green">Nettoyage</Link>
                 <Link to="/services/ramonage" className="block mb-2 hover:text-nico-green">Ramonage</Link>
-                <Link to="/services/espaces-verts" className="block mb-2 hover:text-nico-green">Espaces verts</Link>
                 <Link to="/services/isolation" className="block mb-2 hover:text-nico-green">Isolation</Link>
                 <Link to="/services/travaux-exterieur" className="block mb-2 hover:text-nico-green">Travaux extérieur</Link>
                 <Link to="/services/peinture" className="block mb-2 hover:text-nico-green">Peinture</Link>

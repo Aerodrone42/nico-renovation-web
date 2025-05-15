@@ -15,7 +15,6 @@ import Gouttieres from "./pages/services/Gouttieres";
 import Ramonage from "./pages/services/Ramonage";
 import Isolation from "./pages/services/Isolation";
 import Nettoyage from "./pages/services/Nettoyage";
-import EspacesVerts from "./pages/services/EspacesVerts";
 import TravauxExterieur from "./pages/services/TravauxExterieur";
 import Peinture from "./pages/services/Peinture";
 import Header from "./components/Header";
@@ -44,7 +43,6 @@ const App = () => (
               <Route path="/services/ramonage" element={<Ramonage />} />
               <Route path="/services/isolation" element={<Isolation />} />
               <Route path="/services/nettoyage" element={<Nettoyage />} />
-              <Route path="/services/espaces-verts" element={<EspacesVerts />} />
               <Route path="/services/travaux-exterieur" element={<TravauxExterieur />} />
               <Route path="/services/peinture" element={<Peinture />} />
               <Route path="*" element={<NotFound />} />

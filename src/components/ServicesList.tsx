@@ -6,7 +6,6 @@ import {
   Droplets, 
   Flame, 
   Thermometer, 
-  Sprout, 
   PaintBucket, 
   Construction, 
   Waves,
@@ -60,14 +59,6 @@ const services = [
     description: 'Services de nettoyage pour gouttières, façades, dallages, murets, piscines et bardages.',
     icon: Droplets,
     path: '/services/nettoyage',
-    image: '/lovable-uploads/ae909c66-a968-4fc7-92b8-b88d8a3fbb12.png'
-  },
-  {
-    id: 'espaces-verts',
-    title: 'Entretien espaces verts',
-    description: 'Entretien complet de vos espaces verts, taille de haies et aménagement extérieur.',
-    icon: Sprout,
-    path: '/services/espaces-verts',
     image: '/lovable-uploads/ae909c66-a968-4fc7-92b8-b88d8a3fbb12.png'
   },
   {
