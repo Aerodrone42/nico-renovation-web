@@ -96,7 +96,19 @@ const Footer = () => {
         
         {/* Copyright */}
         <div className="text-center pt-6 border-t border-gray-800 text-sm text-gray-400">
-          <p>© {currentYear} Nico Rénovation - Tous droits réservés</p>
+          <p className="flex items-center justify-center flex-wrap gap-1">
+            © {currentYear} Nico Rénovation - Tous droits réservés
+            <span className="mx-1">|</span>
+            <a 
+              href="https://www.site-internet-sans-abonnement.fr/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-nico-green inline-flex items-center"
+            >
+              Créé par Aerodrone multiservices
+              <ExternalLink size={14} className="ml-1" />
+            </a>
+          </p>
         </div>
       </div>
     </footer>
