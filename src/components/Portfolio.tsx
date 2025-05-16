@@ -39,6 +39,7 @@ const Portfolio: React.FC<PortfolioProps> = ({
                     src={item.imagePath} 
                     alt={item.title} 
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </AspectRatio>
                 <div className="absolute top-2 right-2 bg-nico-blue text-white p-1.5 rounded-full">
