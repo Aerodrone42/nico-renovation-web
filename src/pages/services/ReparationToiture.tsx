@@ -34,15 +34,15 @@ const ReparationToiture = () => {
     },
     {
       id: '4',
-      imagePath: '/lovable-uploads/97bd76ad-18aa-4c34-90f6-a388b55c33d3.png',
+      imagePath: '/lovable-uploads/f0901306-df11-4a22-b092-5aec4d98eeb9.png',
       title: 'Réfection toiture ardoise',
-      description: 'Réfection complète d\'une toiture en ardoise naturelle'
+      description: 'Réfection complète d\'une toiture en ardoise naturelle avec faîtage en tuiles'
     },
     {
       id: '5',
-      imagePath: '/lovable-uploads/d0740f07-031f-4994-b666-ff4b2a7c6574.png',
+      imagePath: '/lovable-uploads/ddafc046-7ca6-44d6-8db8-44254516c7b7.png',
       title: 'Couverture en ardoise',
-      description: 'Finition soignée d\'une couverture en ardoise avec faîtage'
+      description: 'Finition soignée d\'une couverture en ardoise avec faîtage en tuiles rouges'
     }
   ];
   
