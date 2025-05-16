@@ -16,15 +16,15 @@ const ReparationToiture = () => {
   const portfolioItems = [
     {
       id: '1',
-      imagePath: '/lovable-uploads/6e6ba2d8-bb5e-44f1-b663-a5d84c15cb6a.png',
-      title: 'Toiture ardoise avec faîtage',
-      description: 'Rénovation complète de toiture en ardoise avec faîtage en tuiles'
+      imagePath: '/lovable-uploads/e6e29108-1f47-4e88-9481-08ba13d7f5dd.png',
+      title: 'Rénovation charpente',
+      description: 'Réparation complète et remplacement de la charpente endommagée'
     },
     {
       id: '2',
-      imagePath: '/lovable-uploads/784035dd-5238-4d4c-b3f6-7e612528fe8b.png',
-      title: 'Rénovation complète',
-      description: 'Rénovation de toiture en ardoise avec cheminée'
+      imagePath: '/lovable-uploads/a4cd46a2-2f26-4529-898d-15fb6ffff3b7.png',
+      title: 'Restauration de toiture',
+      description: 'Restauration de toiture ancienne avec conservation des éléments d\'origine'
     },
     {
       id: '3',
