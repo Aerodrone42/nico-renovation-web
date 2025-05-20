@@ -1,9 +1,25 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MapPin, Phone, Mail, Clock, Facebook } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
+import { useSearchParams } from 'react-router-dom';
+import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
+  const [searchParams] = useSearchParams();
+  const { toast } = useToast();
+  
+  useEffect(() => {
+    // Check if the user has been redirected after form submission
+    const formSubmitted = searchParams.get('formSubmitted');
+    if (formSubmitted === 'true') {
+      toast({
+        title: "Formulaire envoyé!",
+        description: "Nous vous contacterons dans les plus brefs délais.",
+      });
+    }
+  }, [searchParams, toast]);
+
   return (
     <div>
       {/* Hero Section */}

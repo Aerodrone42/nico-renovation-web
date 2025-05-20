@@ -28,32 +28,15 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     setIsSubmitting(true);
     
-    // Simuler une soumission de formulaire
+    // The form will be submitted to FormSubmit.org
+    // We'll show the success message after the form submission is complete
     setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      toast({
-        title: "Formulaire envoyé!",
-        description: "Nous vous contacterons dans les plus brefs délais.",
-      });
-      
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          subject: '',
-          message: '',
-          service: ''
-        });
-      }, 3000);
-    }, 1500);
+      // This timeout is just to show the loading state briefly
+      // The actual submission is handled by the form action
+    }, 500);
   };
 
   return (
@@ -71,7 +54,20 @@ const ContactForm = () => {
           </p>
         </div>
       ) : (
-        <form onSubmit={handleSubmit}>
+        <form 
+          action="https://formsubmit.co/nicorenovation44@gmail.com" 
+          method="POST"
+          onSubmit={(e) => {
+            handleSubmit(e);
+          }}
+        >
+          {/* FormSubmit configuration */}
+          <input type="hidden" name="_subject" value="Nouvelle demande depuis le site web" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" value={window.location.href} />
+          <input type="text" name="_honey" style={{ display: 'none' }} />
+          
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
